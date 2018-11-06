@@ -43,6 +43,7 @@ public class Request extends HttpServlet {
             out.println("<title>Request Page</title>");
             out.println("</head>");
             out.println("<body>");
+      
             if (request.getParameterMap().containsKey("Register")) {
                 String name = request.getParameter("userName");
                 String email = request.getParameter("email");
@@ -72,7 +73,7 @@ public class Request extends HttpServlet {
                    // RequestDispatcher dispatcher = request.getRequestDispatcher("Admin/index.jsp");
                    // dispatcher.forward(request, response);
                    out.println("<script type=\"text/javascript\">");
-                    out.println("location='http://localhost:8080/eventshala/Admin/index.jsp'");
+                    out.println("location='http://localhost:8080/eventshala/userPanel/index.jsp'");
                     out.println("</script>");
                 } else {
                     out.println("<script type=\"text/javascript\">");
@@ -80,20 +81,20 @@ public class Request extends HttpServlet {
                     out.println("</script>");
                 }
 
-            } else if (request.getParameterMap().containsKey("PostEvent")) {
+            }else if (request.getParameterMap().containsKey("PostEvent")) {
                 HttpSession session = request.getSession();
                 String eventName = request.getParameter("eventName");
                 String eventDate = request.getParameter("eventDate");
                 String eventDec = request.getParameter("eventDec");
                 String userName = (String) session.getAttribute("userName");
                 String eventPhoto = "bl.jpg"; //request.getParameter("eventPhoto");
-                String url = request.getParameter("url");
+                String title = request.getParameter("title");
               //  out.println(eventName + " " + eventDate + " " + eventDec + " " + eventPhoto + " " + url);
-                int result = Event.PostEvent(userName, eventName, eventDate, eventDec, eventPhoto, url);
+                int result = Event.PostEvent(userName, eventName, eventDate, eventDec, eventPhoto, title);
                 if (result > 0) {
                     out.println("<script type=\"text/javascript\">");
                     out.println("alert('Event Posted Successfully')");
-                    out.println("location='http://localhost:8080/eventshala/Admin/';");
+                    out.println("location='http://localhost:8080/eventshala/userPanel/';");
                     out.println("</script>");
                 }
 
@@ -118,24 +119,26 @@ public class Request extends HttpServlet {
                     out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Registered Successfully';");
                     out.println("</script>");
                 
-                }else if (request.getParameterMap().containsKey("updateEvent")) {
+                }
+            }else if (request.getParameterMap().containsKey("updateEvent")) {
                  String id = request.getParameter("id");
-                String updateName = request.getParameter("eventName");
-                String Date = request.getParameter("eventDate");
-                String Dec = request.getParameter("eventDec");
+                String updateName = request.getParameter("name");
+                String Dated = request.getParameter("Date");
+                String Dec = request.getParameter("dec");
                 String Photo = "bl.jpg"; //request.getParameter("eventPhoto");
-                String Title = request.getParameter("url");
-              //  out.println(eventName + " " + eventDate + " " + eventDec + " " + eventPhoto + " " + url);
-                int res = Event.updateEvent(updateName, Date, Dec, Photo, Title,id);
-                if (result > 0) {
+                String Title = request.getParameter("title");
+              //  out.println(updateName + " " + Dated + " " + Dec + " " + Photo + " " + Title+ " " + id);
+                int res = Event.updateEvent(updateName, Dated, Dec, Photo, Title,id);
+                  out.println(res);
+                if (res > 0) {
                     out.println("<script type=\"text/javascript\">");
-                    out.println("alert('Event Posted Successfully')");
-                    out.println("location='http://localhost:8080/eventshala/Admin/';");
+                    out.println("alert('Event Updated Successfully')");
+                    out.println("location='http://localhost:8080/eventshala/userPanel/';");
                     out.println("</script>");
                 }
 
             }
-            }
+             
 
         }
     }

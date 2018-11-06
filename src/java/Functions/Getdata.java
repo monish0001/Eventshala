@@ -22,6 +22,22 @@ public class Getdata {
         return rs;
     
 }
+        public static ResultSet getPendingEvents() throws SQLException{
+    Connection conn = database.getConn();
+    String sql="SELECT * FROM postevent WHERE status ='Pending'";
+    ResultSet rs = database.MyexecuteQuery(conn, sql);
+
+        return rs;
+    
+}
+            public static ResultSet getActiveAndNonActive() throws SQLException{
+    Connection conn = database.getConn();
+    String sql="SELECT * FROM postevent";
+    ResultSet rs = database.MyexecuteQuery(conn, sql);
+
+        return rs;
+    
+}
        public static ResultSet getoneEvent(String id) throws SQLException{
     Connection conn = database.getConn();
     String sql="SELECT * FROM postevent WHERE id ='"+id+"'";
@@ -39,6 +55,13 @@ public static ResultSet getEventsbyUserName(String userName) throws SQLException
 public static ResultSet getRegistrations(String id) throws SQLException{
     Connection conn = database.getConn();
     String sql="SELECT * FROM registration WHERE parent ='"+id+"'";
+    ResultSet rs = database.MyexecuteQuery(conn, sql);
+        return rs;
+    
+}
+   public static ResultSet getAllEvent(String userName) throws SQLException{
+    Connection conn = database.getConn();
+    String sql="SELECT * FROM postevent WHERE userName ='"+userName+"'";
     ResultSet rs = database.MyexecuteQuery(conn, sql);
         return rs;
     

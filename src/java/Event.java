@@ -70,7 +70,10 @@ public static int RegisterforEvent(String Name, String Mobile, String Email, Str
         int result = database.MyexecuteUpdate(conn, sql);
         return result;
 }
-public static int updateEvent(String updateName, String updateDate, String Dec, String Photo, String Title,String id){
-    return 0;
+public static int updateEvent(String updateName, String updateDate, String Dec, String Photo, String Title,String id) throws SQLException{
+     Connection conn = database.getConn();
+        String sql ="UPDATE postevent SET eventName="+"'"+updateName+"',"+"eventDate="+"'"+updateDate+"',"+"eventDec="+"'"+Dec+"',"+"eventPhoto="+"'"+Photo+"',"+"eventTitle="+"'"+Title+"' WHERE id='"+id+"'";
+         int result = database.MyexecuteUpdate(conn, sql);
+    return result;
 } 
 }
