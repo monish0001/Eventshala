@@ -45,6 +45,7 @@ public class Request extends HttpServlet {
             out.println("<body>");
       
             if (request.getParameterMap().containsKey("Register")) {
+                
                 String name = request.getParameter("userName");
                 String email = request.getParameter("email");
                 String password = request.getParameter("password");
@@ -60,11 +61,11 @@ public class Request extends HttpServlet {
                     out.println("</script>");
                 }
             } else if (request.getParameterMap().containsKey("Login")) {
+              
                 String name = request.getParameter("userName");
                 String password = request.getParameter("password");
                 boolean loginResult = Event.Login(name, password);
                 HttpSession session = request.getSession();
-
                 if (loginResult == true) {
                     session.setAttribute("userName", name);
                     // out.println("<script type=\"text/javascript\">");
