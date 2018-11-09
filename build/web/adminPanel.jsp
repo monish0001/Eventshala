@@ -1,7 +1,20 @@
+<%-- 
+    Document   : adminPanel
+    Created on : Nov 9, 2018, 10:34:57 PM
+    Author     : 4
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%-- 
+    Document   : login.jsp
+    Created on : Oct 31, 2018, 11:14:55 PM
+    Author     : 4
+--%>
+<!DOCTYPE html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Register | Eventshala</title>
+	<title>Eventshala | Admin</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->	
@@ -32,21 +45,18 @@
 	<div class="limiter">
 		<div class="container-login100">
 			<div class="wrap-login100">
-				<form action="Register" method="GET" class="login100-form validate-form">
+				<form action="Request" method="GET" class="login100-form validate-form">
 					<span class="login100-form-title p-b-26">
-						Welcome to Eventshala
+						ADMIN LOGIN
 					</span>
 					<span class="login100-form-title p-b-48">
-					<img src="images\icons\logo.jpg">
+						<img src="images\icons\logo.jpg">
+						
 					</span>
 
-						<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100" data-placeholder="Email"></span>
-					</div>
-					<div class="wrap-input100 validate-input" data-validate = "Valid username is: yourName">
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is: userName">
 						<input class="input100" type="text" name="userName">
-						<span class="focus-input100" data-placeholder="User Name"></span>
+						<span class="focus-input100" data-placeholder="Username"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="Enter password">
@@ -57,25 +67,15 @@
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
-					<input class="input100" type="hidden" name="Register">
-					<div  class="container-login100-form-btn">
+					<div class="container-login100-form-btn">
 						<div class="wrap-login100-form-btn">
 							<div class="login100-form-bgbtn"></div>
-							<button name="Register" value="button"  style="background:black" class="login100-form-btn">
-								Register
+                                                        <button name="adminLogin" value="Login" style="background:black" class="login100-form-btn">
+								Login
 							</button>
 						</div>
 					</div>
 
-					<div class="text-center p-t-115">
-						<span class="txt1">
-							Already have an account?
-						</span>
-
-						<a class="txt2" href="login.html">
-							Log in
-						</a>
-					</div>
 				</form>
 			</div>
 		</div>
@@ -103,3 +103,4 @@
 
 </body>
 </html>
+

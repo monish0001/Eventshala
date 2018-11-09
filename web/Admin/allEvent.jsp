@@ -7,6 +7,11 @@
   %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip(); 
+});
+</script>
 <%@include file="header.jsp" %>
  <div class="app-content content">
       <div class="content-wrapper">
@@ -53,6 +58,7 @@
 									<th>Event Date</th>
                                                                         <th>Post Date</th>
 									<th>status</th>
+                                                                        <th>Regis.</th>
                                                                         <th>Action</th>
                                                                         <th>Details</th>
 								</tr>
@@ -66,7 +72,8 @@
 									<td><% out.println(rs.getString("eventDate")); %></td>
                                                                         <td><% out.println(rs.getString("eventDate")); %></td>
 									<td><% out.println(rs.getString("status")); %></td>
-									<td>Deactivate</td> 
+                                                                        <td> <a href="registrations.jsp?id=<% out.println(rs.getString("id")); %>">Regis.</a></td> 
+                                                                        <td> <a data-toggle="tooltip" title="Note: if Deactivate this event you will not able to Active again !!!" href="../Request?Deactivate&id=<% out.println(rs.getString("id")); %>">Deactivate</a></td> 
                                                         <td> <a href="eventDetails.jsp?id=<% out.println(rs.getString("id")); %>">More</a></td> 
 								</tr>
                                                                 <% i++;} %>

@@ -60,7 +60,46 @@ public class Request extends HttpServlet {
                     out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Somthing Went Wrong';");
                     out.println("</script>");
                 }
-            } else if (request.getParameterMap().containsKey("Login")) {
+            }else if (request.getParameterMap().containsKey("adminLogin")) {
+              
+                String name = request.getParameter("userName");
+                String password = request.getParameter("password");
+                boolean loginResult = Event.Login(name, password);
+                HttpSession session = request.getSession();
+                if (loginResult == true) {
+                    session.setAttribute("userName", name);
+                    // out.println("<script type=\"text/javascript\">");
+                    // out.println("location='http://localhost:8080/eventshala/Admin/';");
+                    // out.println("</script>");
+                   // RequestDispatcher dispatcher = request.getRequestDispatcher("Admin/index.jsp");
+                   // dispatcher.forward(request, response);
+                   out.println("<script type=\"text/javascript\">");
+                    out.println("location='http://localhost:8080/eventshala/Admin/index.jsp'");
+                    out.println("</script>");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Invalid Cradentials';");
+                    out.println("</script>");
+                }
+
+            }else if (request.getParameterMap().containsKey("Message")) {
+              
+                String name = request.getParameter("name");
+                String email = request.getParameter("email");
+                String msg = request.getParameter("massage");
+                int result = Event.Query(name,email,msg);
+             
+                if (result > 0) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Your Message has been successfully send we will contact you soon thankyou';");
+                    out.println("</script>");
+                } else {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Somthing Went Wrong';");
+                    out.println("</script>");
+                }
+
+            }else if (request.getParameterMap().containsKey("Login")) {
               
                 String name = request.getParameter("userName");
                 String password = request.getParameter("password");
@@ -82,6 +121,26 @@ public class Request extends HttpServlet {
                     out.println("</script>");
                 }
 
+            }else if (request.getParameterMap().containsKey("Approve")) {
+              
+                String id = request.getParameter("id");
+                int result = Event.ApproveEvent(id);
+                if (result > 0) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Event Approved Successfully')");
+                    out.println("location='http://localhost:8080/eventshala/Admin/pendingEvent.jsp';");
+                    out.println("</script>");
+                }
+            }else if (request.getParameterMap().containsKey("Deactivate")) {
+              
+                String id = request.getParameter("id");
+                int result = Event.DeactivateEvent(id);
+                if (result > 0) {
+                    out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Event Deactivate Successfully')");
+                    out.println("location='http://localhost:8080/eventshala/Admin/allEvent.jsp';");
+                    out.println("</script>");
+                }
             }else if (request.getParameterMap().containsKey("PostEvent")) {
                 HttpSession session = request.getSession();
                 String eventName = request.getParameter("eventName");

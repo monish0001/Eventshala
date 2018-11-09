@@ -65,7 +65,7 @@
                     <a class="nav-link has_sub_menu" href="latestEvent.jsp">Latest Event</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link has_sub_menu" href="services.jsp">Services</a>
+                    <a class="nav-link has_sub_menu" href="about.jsp">About Us</a>
                 </li>
             </ul>
             <a href="signup.jsp" class="btn btn-primary header_btn ">Sign Up</a>

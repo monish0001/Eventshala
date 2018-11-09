@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<% if (session.getAttribute("userName") == null) {
+        out.println("<script type=\"text/javascript\">");
+        out.println("location='http://localhost:8080/eventshala/error.jsp?msg=Somthing Went Wrong';");
+        out.println("</script>");
+    }
+%>
 <html class="loading" lang="en" data-textdirection="ltr">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

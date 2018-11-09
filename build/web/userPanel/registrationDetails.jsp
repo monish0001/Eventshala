@@ -33,7 +33,7 @@
 	<div class="col-12">
 		<div class="card">
 			<div class="card-header">
-				<h4 class="card-title">eventName</h4>
+				<h4 class="card-title"> </h4>
 				<a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
 				<div class="heading-elements">
 					<ul class="list-inline mb-0">
@@ -45,7 +45,7 @@
 			</div>
 			<div class="card-content collapse show">
 				<div class="card-body">
-					<p><span class="text-bold-600">Congratulations you got 3 registrations for your event</p>
+					<p><span class="text-bold-600"> </p>
 					<div class="table-responsive">
 						<table class="table">
 							<thead>

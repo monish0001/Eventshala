@@ -70,7 +70,7 @@
                         <span class="heading_line"></span>
                     </h3>
                     <p>
-                        We are creative and interactive business agency, we make creative projects. View some of the most successful projects. Passion, ideas, and ambition.
+                      Eventshala is an online event promotion website in India, based on Dwarka, Newe Delhi  to operate our business and fulfill the clients need.
                     </p>
                 </div>
             </div>
@@ -82,12 +82,12 @@
                         <i class="ion-ios-rose-outline"></i>
                         <div class="content">
                             <h5 class="title">
-                                Sign Up
+                               Find Problems 
                             </h5>
                             <p class="text">
-                                Register yourself and be able to post your events on EVENTSHALA.
+                               If any event posted on Eventshala and doesn't got any registration then Eventshala study the problem and try to make it suceesful  next time.
                             </p>
-                            <a href="#" class="link">Read More</a>
+                          
                         </div>
                     </div>
                 </div>
@@ -96,12 +96,12 @@
                         <i class="ion-ios-construct-outline "></i>
                         <div class="content">
                             <h5 class="title">
-                                Post Event 
+                               Provide Solutions
                             </h5>
                             <p class="text">
-                                Post your events here.
+                               Eventshala try to provide the best solutions to make a event succesful .
                             </p>
-                            <a href="#" class="link">Read More</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -110,12 +110,12 @@
                         <i class="ion-ios-contacts-outline"></i>
                         <div class="content">
                             <h5 class="title">
-                                Get Registration
+                              Be Happy
                             </h5>
                             <p class="text">
-                                Find your favourite event , register and win. 
+                            when event successfully completed with the help of more number of registrations Eventshala feel HAPPY. 
                             </p>
-                            <a href="#" class="link">Read More</a>
+                           
                         </div>
                     </div>
                 </div>
@@ -185,7 +185,7 @@
                         <span class="heading_line"></span>
                     </h3>
                     <p>
-                        Whether you’re building a welcome mat for your SaaS or a clean, corporate portfolio, Sooad has your design needs covered.
+                       The world right now is advancing towards a better technology. Thus, we compete with the rapidly changing trends in the world. Hence we conclude to explore the technology even more efficiently.
                     </p>
                 </div>
             </div>
@@ -198,13 +198,13 @@
                             <img src="assets/img/icon/006-innovation.png" alt="icon">
                             <div class="content">
                                 <h5 class="title">
-                                    UI&UX Design
+                                 SignUp
 
                                 </h5>
                                 <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
+                                    Register yourself and be able to post your events on EVENTSHALA.
                                 </p>
-                                <a href="#" class="link">Read More</a>
+                                
                             </div>
                         </div>
                     </div>
@@ -213,12 +213,12 @@
                             <img src="assets/img/icon/005-increase.png" alt="icon">
                             <div class="content">
                                 <h5 class="title">
-                                    Marketing
+                                 Post Event
                                 </h5>
                                 <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
+                                    Post your events here and get registrations.
                                 </p>
-                                <a href="#" class="link">Read More</a>
+                               
                             </div>
                         </div>
                     </div>
@@ -227,60 +227,16 @@
                             <img src="assets/img/icon/004-computer.png" alt="icon">
                             <div class="content">
                                 <h5 class="title">
-                                    Development
+                                      Get Registration
                                 </h5>
                                 <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
+                                    Find your favourite event , register and win. 
                                 </p>
-                                <a href="#" class="link">Read More</a>
+                               
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-12">
-                        <div class="img_box_one">
-                            <img src="assets/img/icon/003-rocket.png" alt="icon">
-                            <div class="content">
-                                <h5 class="title">
-                                    Economic Trends
-
-                                </h5>
-                                <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
-                                </p>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="img_box_one ">
-                            <img src="assets/img/icon/002-compass.png" alt="icon">
-                            <div class="content">
-                                <h5 class="title">
-                                    Business Support
-
-                                </h5>
-                                <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
-                                </p>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-12">
-                        <div class="img_box_one ">
-                            <img src="assets/img/icon/001-browser.png" alt="icon">
-                            <div class="content">
-                                <h5 class="title">
-                                    Finance Consulting
-
-                                </h5>
-                                <p class="text">
-                                    These modular elements can be readily used and customized across pages and in different blocks
-                                </p>
-                                <a href="#" class="link">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>
@@ -301,12 +257,12 @@
                             Ready to post your event ? Register now!
                         </h3>
                         <p class="color-light">
-                            Sooad is a fully packed practical tool of premium built and design. Let your creativity loose and start building your website now.
+                           Dont't miss your chance for free promotion register yourself with Eventshala .
                         </p>
                     </div>
                 </div>
                 <div class="call_btn">
-                    <a href="Login/register.html" class="btn btn-primary btn-rounded">REGISTER NOW</a>
+                    <a href="signup.jsp" class="btn btn-primary btn-rounded">REGISTER NOW</a>
                 </div>
             </div>
         </div>
@@ -447,7 +403,7 @@
                         <span class="heading_line"></span>
                     </h3>
                     <p>
-                        Whether you’re building a welcome mat for your SaaS or a clean, corporate portfolio, Sooad has your design needs covered.
+                        Whether you are normal visitors or want to post your event everything is free here.
                     </p>
                 </div>
             </div>
@@ -470,30 +426,30 @@
                         <div class="testimonial_box_two text-center">
 
                             <blockquote class="color-light"><p class="color-light">
-                                The design is fantastic, the builder saves me tons of time and the support has been excellent. I highly recommend Soo ad.
+                                Really this is an amazing platform for online event promotion here you can post your event and get lots of registration for your event by getting registrations you can make your event successful Thank You !!!!
                             </p></blockquote>
                             <h5  class="color-light">
-                                —   Jimmy Page , <span class="color-gray"> Front-End Developer </span>
+                                Sahil Nishal , <span class="color-gray"> Web Developer (Student at DUCS) </span>
                             </h5>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimonial_box_two text-center">
                             <blockquote  class="color-light"><p class="color-light">
-                                The design is fantastic, the builder saves me tons of time and the support has been excellent. I highly recommend Sooad.
+                               Really this is an amazing platform for online event promotion here you can post your event and get lots of registration for your event by getting registrations you can make your event successful Thank You !!!!
                             </p></blockquote>
                             <h5  class="color-light">
-                                —   Jimmy Page , <span class="color-gray"> Front-End Developer </span>
+                              Neha Tomer , <span class="color-gray"> C++ Coder (Student at DDUC) </span>
                             </h5>
                         </div>
                     </div>
                     <div class="item">
                         <div class="testimonial_box_two  text-center">
                             <blockquote  class="color-light"><p class="color-light">
-                                The design is fantastic, the builder saves me tons of time and the support has been excellent. I highly recommend Sooad.
+                               Really this is an amazing platform for online event promotion here you can post your event and get lots of registration for your event by getting registrations you can make your event successful Thank You !!!!
                             </p></blockquote>
                             <h5  class="color-light">
-                                —   Jimmy Page , <span class="color-gray"> Front-End Developer </span>
+                               Ankush Khanna , <span class="color-gray"> Delhi University Topper (Student at DDUC) </span>
                             </h5>
                         </div>
                     </div>
@@ -528,32 +484,35 @@
                                 <ul class="team_social">
                                     <li>
                                         <a href="#">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                       
+                                    </li>
+                                    <li>
+                                     <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                            <a href="#">
                                             <i class="fa fa-twitter"></i>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-weixin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-tumblr"></i>
-                                        </a>
+                                      
                                     </li>
                                 </ul>
                             </div>
                             <div class="team_box_content">
                                 <h5>
-                               Madar Monish
+                               Mohd Monish
                                 </h5>
                                 <h6>
-                                     Founder & CEO 
+                                     Co-Founder
+                                   
                                 </h6>
                                 <p>Enterprises seeking a digital edge transform processes, business models and the customer experience by exploiting digital connections. </p>
                             </div>
@@ -567,32 +526,34 @@
                                 <ul class="team_social">
                                     <li>
                                         <a href="#">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                       
+                                    </li>
+                                    <li>
+                                     <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                            <a href="#">
                                             <i class="fa fa-twitter"></i>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-weixin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-tumblr"></i>
-                                        </a>
+                                      
                                     </li>
                                 </ul>
                             </div>
                             <div class="team_box_content">
                                 <h5>
-                                   kshitiz Gupta 
+                                     Shashank Kumar
                                 </h5>
                                 <h6>
-                                    Co-Founder
+                            Founder & CEO 
                                 </h6>
                                 <p>Enterprises seeking a digital edge transform processes, business models and the customer experience by exploiting digital connections. </p>
                             </div>
@@ -603,32 +564,35 @@
                         <div class="team_box_two">
                             <div class="team_img">
                                 <img src="assets/img/team/t1.jpg" alt="Jena Lambert">
-                                <ul class="team_social">
+                                  <ul class="team_social">
                                     <li>
                                         <a href="#">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                       
+                                    </li>
+                                    <li>
+                                     <a href="#">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    </li>
+                                    <li>
+                                            <a href="#">
                                             <i class="fa fa-twitter"></i>
                                         </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-google-plus"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-weixin"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-tumblr"></i>
-                                        </a>
+                                      
                                     </li>
                                 </ul>
                             </div>
                             <div class="team_box_content">
                                 <h5>
-                                  Shashank Kumar
+                                      kshitiz Gupta 
+                              
                                 </h5>
                                 <h6>
                                    Co-founder 
@@ -681,7 +645,7 @@
                         Latest Events
                         <span class="heading_line"></span>
                     </h3>
-                    <p>We love what we do and we do it with passion. We value the experimentation, the reformation of the message, and the smart incentives.</p>
+                    <p>Register in your favorite event and win it get cash prize or goodies.</p>
                 </div>
             </div>
         </div>
@@ -695,8 +659,9 @@
                     </div>
                     <div class="card_box_body">
                         <span><% out.println(rs.getString("eventDate")); %></span>
-                        <a href="eventDetails.jsp?eventid=<% out.println(rs.getString("id")); %>"><h5><% out.println(rs.getString("eventName")); %></h5></a>
-                        <a href="eventDetails.jsp?eventid=<% out.println(rs.getString("id")); %>" class="read-more">Continue Reading </a>
+                        <a href="eventDetails.jsp?eventid=<% out.println(rs.getString("id")); %>"><h5><% out.println(rs.getString("eventName")); 
+                            String str=rs.getString("id");%></h5></a>
+                        <a href="eventDetails.jsp?eventid=<%out.println(str); %>" class="read-more">Continue Reading </a>
                     </div>
                 </article>
             </div>
@@ -726,7 +691,6 @@
                         </h5>
                         <p class="text color-gray">
                             +917550687950 <br/>
-                            +919821446257
                         </p>
                     </div>
                 </div>
@@ -739,8 +703,8 @@
                             Email Us
                         </h5>
                         <p class="text color-gray">
-                            sales ShashankKumar488@gmail.com<br/>
-                            support MadarMonish420@gmail.com
+                            <a style="color: white" href="mailto:shashankkumar488@gmail.com">  ShashankKumar488@gmail.com</a>
+                          
                         </p>
                     </div>
                 </div>
@@ -753,9 +717,9 @@
                             Visit Us
                         </h5>
                         <p class="text color-gray">
-                            PO Box 110059 Collins Street
+                            DDUC Dwarka, New Delhi 110078
                             <br/>
-                            Victoria 8007 Australia
+                           
                         </p>
                     </div>
                 </div>
@@ -772,11 +736,11 @@
                         <span class="heading_line"></span>
 
                     </h3>
-                    <p>
+                    <p>Feel free to message here any time related to Eventshala<br>
                         Compliments , Complaints and Queries.
                     </p>
                 </div>
-                <form action="" method="GET">
+                <form action="Request" method="GET">
                 <div class="row">
                     <div class="col-md-6 col-12">
                         <input required="" type="text" name="name" class="form-control" aria-required="true"  placeholder="Your Name">
@@ -788,7 +752,7 @@
                         <textarea required="" name="massage" cols="40" rows="10" class=" form-control" placeholder="Your Message"></textarea>
                     </div>
                     <div class="col-12">
-                        <input type="submit" value="Send Message"
+                        <input type="submit" name="Message" value="Send Message"
                         class="btn btn-primary btn-rounded btn-block" >
                     </div>
                 </div>

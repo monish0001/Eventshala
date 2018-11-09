@@ -11,8 +11,7 @@
             </div>
             <div class="col-12">
                 <ul id="menu-footer" class="footer_menu">
-                    <li class="nav-item"><a class="nav-link" href="services.jsp">Services</a>
-                    </li>
+                  
                     <li class="nav-item"><a  class="nav-link" href="#">Terms</a>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contact.jsp">Contact Us</a>

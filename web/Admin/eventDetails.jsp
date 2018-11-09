@@ -64,6 +64,11 @@
                         </dl>
                     </div>
                    <div>
+                       
+                        <%  String s1=rs.getString("status"); if (s1.equals("Deactivated")||s1.equals("Pending")) { %>
+                                         <a href="../Request?Approve&id=<%  out.println(rs.getString("id")); %>" class="btn btn-primary btn-min-width mr-1 mb-1" >Approve Now</a>
+                   	
+                                <%   }%>
                     </div>
                 </div>
             </div>

@@ -43,7 +43,7 @@
 				<img class="" src="theme-assets/images/carousel/22.jpg" alt="Card image cap">
 				<div class="card-body">
 					<p class="card-text">  <% String str=rs.getString("eventDec");
-                                           out.println( str.substring(0,5));
+                                           out.println(str.substring(0,100));
                                       
                                        %></p>
 				</div>
