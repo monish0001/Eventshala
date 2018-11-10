@@ -1,10 +1,11 @@
 <%@include file="header.jsp" %>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%   Getdata getData = new Getdata();
+<%   
+    Getdata getData = new Getdata();
     ResultSet rs= getData.getAllEvents();
     
-  %>
+%>
 <div class="icon_menu menu_list">
     <ul class="nav ">
         <li>
@@ -230,7 +231,7 @@
                                       Get Registration
                                 </h5>
                                 <p class="text">
-                                    Find your favourite event , register and win. 
+                                    Find your favorite event , register and win. 
                                 </p>
                                
                             </div>
@@ -302,7 +303,7 @@
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
                                         <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                        <p>Mobile Development , Web Design , Web Development</p>
                                     </div>
                                 </div>
                             </div>
@@ -480,10 +481,10 @@
                     <div class="col-md-4 col-12">
                         <div class="team_box_two">
                             <div class="team_img">
-                                <img src="assets/img/team/t1.jpg" alt="Jena Lambert">
+                                <img src="assets/img/team/mns.jpg" alt="Jena Lambert">
                                 <ul class="team_social">
                                     <li>
-                                        <a href="#">
+                                        <a href="https://github.com/dmonishdu">
                                             <i class="fa fa-github"></i>
                                         </a>
                                        
@@ -494,7 +495,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="https://www.instagram.com/m_monish786/">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -514,7 +515,7 @@
                                      Co-Founder
                                    
                                 </h6>
-                                <p>Enterprises seeking a digital edge transform processes, business models and the customer experience by exploiting digital connections. </p>
+                                <p>Mohd Monish, the Co-founder of Eventshala completed his degree in B.Tech and higher studies from University of Pennsylvania. He has contributed in renowned international projects. He is currently working in Eventshala and leading the technical department.</p>
                             </div>
                         </div>
                     </div>
@@ -522,7 +523,7 @@
                     <div class="col-md-4 col-12">
                         <div class="team_box_two active">
                             <div class="team_img">
-                                <img src="assets/img/team/t1.jpg" alt="Jena Lambert">
+                                <img src="assets/img/team/snk.jpg" alt="Jena Lambert">
                                 <ul class="team_social">
                                     <li>
                                         <a href="#">
@@ -531,12 +532,12 @@
                                        
                                     </li>
                                     <li>
-                                     <a href="#">
+                                     <a target="_blank" href="https://www.facebook.com/shashank.kumar.330467">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a target="_blank" href="https://www.instagram.com/kumar_sk_/?hl=en">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -553,9 +554,9 @@
                                      Shashank Kumar
                                 </h5>
                                 <h6>
-                            Founder & CEO 
+                            Managing Director
                                 </h6>
-                                <p>Enterprises seeking a digital edge transform processes, business models and the customer experience by exploiting digital connections. </p>
+                                <p>Shashank Kumar, the managing director of Eventshala has achieved his degree in MBA from renowned University of California. He has worked as the management head in various national and international projects. Presently he is devoted to Eventshala and organising various events across India.</p>
                             </div>
                         </div>
                     </div>
@@ -563,7 +564,7 @@
                     <div class="col-md-4 col-12">
                         <div class="team_box_two">
                             <div class="team_img">
-                                <img src="assets/img/team/t1.jpg" alt="Jena Lambert">
+                                <img style="height:400;" src="assets/img/team/ksz.jpg" alt="Jena Lambert">
                                   <ul class="team_social">
                                     <li>
                                         <a href="#">
@@ -572,12 +573,13 @@
                                        
                                     </li>
                                     <li>
-                                     <a href="#">
+                                     <a target="_blank" href="
+https://www.facebook.com/kshitiz.gupta.7121  ">
                                             <i class="fa fa-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a target="_blank" href="https://www.instagram.com/kshitiz_tango/?hl=en  ">
                                             <i class="fa fa-instagram"></i>
                                         </a>
                                     </li>
@@ -595,9 +597,9 @@
                               
                                 </h5>
                                 <h6>
-                                   Co-founder 
+                                  CEO & Co-founder 
                                 </h6>
-                                <p>Enterprises seeking a digital edge transform processes, business models and the customer experience by exploiting digital connections. </p>
+                                <p>Kshitiz Gupta, the CEO of Eventshala along with his few classmates has eastablished this platform of online event promotion. Besides his exceptional talent in coding and hard work in organising events he has a keen interest in professional gaming which has bagged him many achievements.</p>
                             </div>
                         </div>
                     </div>
