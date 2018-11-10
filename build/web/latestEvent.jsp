@@ -14,9 +14,9 @@
             <div class="col-12 col-md-7">
                 <div class="align-items-center text-center">
                     <h2 class="color-light">
-                        Our Services
+                        Latest Events
                     </h2>
-                    <p class="color-light">Integrate a simple icon or a custom image with a heading and a short description. Icon boxes truly make your website stand out.</p>
+                    <p class="color-light">Event happing in all over India you can find here.</p>
                 </div>
             </div>
         </div>
@@ -30,13 +30,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="section_title text-center mb50">
-                    <h6 class="small_title">Welcome to sooad </h6>
+                    <h6 class="small_title">Welcome to Eventshala </h6>
                     <h3 class="title">
-                        Our Practice & Services
+                     
                         <span class="heading_line"></span>
                     </h3>
                     <p>
-                        We are creative and interactive business agency founded in London. Nowadays, we've grown and expanded our services, and have become a multinational firm, offering a variety of services and solutions Worldwide. Our agency can only be as strong as our people & because of this.
+                     The world right now is advancing towards a better technology. Thus, we compete with the rapidly changing trends in the world. Hence we conclude to explore the technology even more efficiently.
                     </p>
                 </div>
             </div>
@@ -48,12 +48,12 @@
                     <i class="ion-ios-bonfire-outline color-blue"></i>
                     <div class="content">
                         <h5 class="title">
-                            Economic Trends
+                        REGISTER 
                         </h5>
                         <p class="text">
-                            These modular elements can be readily used and customized across pages and in different blocks
+                       
                         </p>
-                        <a href="#" class="link">Read More</a>
+                  
                     </div>
                 </div>
             </div>
@@ -62,12 +62,12 @@
                     <i class="ion-ios-compass-outline color-blue"></i>
                     <div class="content">
                         <h5 class="title">
-                            Finance Consulting
+                          ATTEND EVENT 
                         </h5>
                         <p class="text">
-                            These modular elements can be readily used and customized across pages and in different blocks
+                       
                         </p>
-                        <a href="#" class="link">Read More</a>
+                      
                     </div>
                 </div>
             </div>
@@ -76,12 +76,12 @@
                     <i class="ion-ios-chatbubbles-outline color-blue"></i>
                     <div class="content">
                         <h5 class="title">
-                            Business Support
+                         GET PRIZE
                         </h5>
                         <p class="text">
-                            These modular elements can be readily used and customized across pages and in different blocks
+                        
                         </p>
-                        <a href="#" class="link">Read More</a>
+                      
                     </div>
                 </div>
             </div>
@@ -98,13 +98,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h2 class="color-light bold">
-                    Find Your Style <br/>
-                    Explore Future, Create Sooad!
+                    Find Your favourite <br/>
+                  Event at Evenshala !
                 </h2>
                 <p class="color-gray">
                     We love what we do and we do it with passion. We value the experimentation, the reformation of the message, and the smart incentives. We offer a variety of services and solutions Worldwide.
                 </p>
-                <a href="#" class="btn popup_video  btn-rounded btn-primary">
+                <a href="https://www.youtube.com/watch?v=qLp4phGL41s" class="btn popup_video  btn-rounded btn-primary">
                     <i class="fa fa-play"></i>
                     Watch video
                 </a>
@@ -146,7 +146,7 @@
                                 </h5>
                                 <p class="text">
                                        <% String str=rs.getString("eventDec");
-                                           out.println( str.substring(0,5));
+                                           out.println( str.substring(0,100));
                                       
                                        %>
                                 </p>

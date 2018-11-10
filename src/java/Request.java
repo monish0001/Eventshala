@@ -172,7 +172,7 @@ public class Request extends HttpServlet {
                 String Email = request.getParameter("Descreption");
                 String Parent = request.getParameter("parent");
                 String eventId = request.getParameter("eventName");
-                out.println(Name+","+Mobile+","+Email+","+Parent+","+eventId);
+               // out.println(Name+","+Mobile+","+Email+","+Parent+","+eventId);
                 int result=Event.RegisterforEvent( Name, Mobile, Email, Parent, eventId);
                 if(result>0){
                  out.println("<script type=\"text/javascript\">");

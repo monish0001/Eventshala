@@ -40,8 +40,8 @@
         
                     <div class="col-md-4 col-12">
                         <div class="img_box_two">
-                            <div class="img_container"  >
-                                	<img src="assets/img/bg/<% out.println(resultset.getString("eventPhoto"));%>">
+                            <div class="img_container"  style="background-image: url('assets/img/bg/bl3.jpg')" >
+                                	<!--<img src="assets/img/bg/<% out.println(resultset.getString("eventPhoto"));%>"> -->
                             </div>
                             <div class="content">
                                 <h5 class="title">
