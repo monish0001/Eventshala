@@ -10,7 +10,7 @@
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Home</a>
                   </li>
                   <li class="breadcrumb-item active">Post event
                   </li>
@@ -33,7 +33,7 @@
                     </ul>
                 </div>
             </div>                
-            <form action="../Request" method="GET" class="form" >
+            <form action="../Request" method="POST" enctype="multipart/form-data">
             	<div class="form-body">
             <div class="card-content">
                 <div class="card-body">

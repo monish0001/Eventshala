@@ -1,11 +1,16 @@
+<%  String eventid = request.getParameter("id"); %>
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
+<%@include file="header.jsp" %>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%  String id=request.getParameter("id");
+<%   
     Getdata getData = new Getdata();
-    ResultSet rs= getData.getoneEvent(id);
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.getoneEvent(eventid);
     
-    
-  %>
+%>
 <%@include file="header.jsp" %>
     <div class="app-content content">
       <div class="content-wrapper">
@@ -18,7 +23,7 @@
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Home</a>
                   </li>
                   <li class="breadcrumb-item active">Event Details
                   </li>
@@ -40,32 +45,32 @@
                     </ul>
                 </div>
             </div>
-            <% while (rs.next()) {  %>
+             <%  for(int i = 0; i < eventList.size(); i++) {  %>
             <div class="card-content">
                 <div class="card-body">
                     <div class="card-text">
                         <dl class="row">
                             <dt class="col-sm-3"><h1 >Name</h1></dt>
-                            <dd class="col-sm-9">  <%  out.println(rs.getString("eventName")); %></dd>
+                            <dd class="col-sm-9"> <%  out.println(eventList.get(i).getEventName());%></dd>
                         </dl>
                         <dl class="row">
                             <dt class="col-sm-3"><h1 >Title</h1></dt>
-                            <dd class="col-sm-9">  <%  out.println(rs.getString("eventTitle")); %></dd>
+                            <dd class="col-sm-9"> <%  out.println(eventList.get(i).getEventTitle()); %></dd>
                         </dl>
                         <dl class="row">
                             <dt class="col-sm-3"><h1 >Date</h1></dt>
-                            <dd class="col-sm-9">  <%  out.println(rs.getString("eventDate")); %></dd>
+                            <dd class="col-sm-9">   <%  out.println(eventList.get(i).getEventDate()); %></dd>
                         </dl>
                         <dl class="row">
                             <dt class="col-sm-3 text-truncate"><h1 >Desc..</h1></dt>
-                            <dd class="col-sm-9">  <%  out.println(rs.getString("eventDec")); %></dd>
+                            <dd class="col-sm-9"> <%  out.println(eventList.get(i).getEventDec()); %></dd>
                         </dl>
                             </dd>
                         </dl>
                     </div>
                    <div>
-                         <%  String s1=rs.getString("status"); if (!s1.equals("Deactivated")) { %>
-                                         <a href="updateEvent.jsp?id=<%  out.println(rs.getString("id")); %>" class="btn btn-primary btn-min-width mr-1 mb-1" >Update Now</a>
+                         <%  String s1=eventList.get(i).getStatus(); if (!s1.equals("Deactivated")) { %>
+                                         <a href="updateEvent.jsp?id=<%  out.println(eventList.get(i).getId()); %>" class="btn btn-primary btn-min-width mr-1 mb-1" >Update Now</a>
                    	
                                 <%   }%>
                    	

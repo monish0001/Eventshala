@@ -7,9 +7,9 @@
             <div class="col-12 col-md-12">
                 <div class="align-items-center">
                     <ul class="breadcrumbs">
-                        <li><span><a href="#">Home</a></span> <span class="fa fa-angle-right"></span> </li>
-                        <li><span><a href="#">Events</a></span> <span class="fa fa-angle-right"></span> </li>
-                         <li><span><a href="#">Event Details</a></span> <span class="fa fa-angle-right"></span> </li>
+                        <li><span><a href="http://localhost:8080/eventshala/index.jsp">Home</a></span> <span class="fa fa-angle-right"></span> </li>
+                        <li><span><a href="http://localhost:8080/eventshala/latestEvent.jsp">Events</a></span> <span class="fa fa-angle-right"></span> </li>
+                         <li><span><a href="http://localhost:8080/eventshala/eventDetails.jsp?eventid=<% out.print(request.getParameter("id")); %>">Event Details</a></span> <span class="fa fa-angle-right"></span> </li>
                         <li><span>Register</span></li>
                     </ul>
                     <h2>

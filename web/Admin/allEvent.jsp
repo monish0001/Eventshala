@@ -1,11 +1,13 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<% 
+<%   
     Getdata getData = new Getdata();
-    ResultSet rs= getData.getActiveAndNonActive();
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.getActiveAndNonActive();
     
-  %>
-
+%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <script>
 $(document).ready(function(){
@@ -23,7 +25,7 @@ $(document).ready(function(){
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Home</a>
                   </li>
                   <li class="breadcrumb-item active">All Events
                   </li>
@@ -56,7 +58,7 @@ $(document).ready(function(){
 									<th>#</th>
 									<th>eventName</th>
 									<th>Event Date</th>
-                                                                        <th>Post Date</th>
+                                                                
 									<th>status</th>
                                                                         <th>Regis.</th>
                                                                         <th>Action</th>
@@ -65,16 +67,17 @@ $(document).ready(function(){
 							</thead>
 							<tbody>
                                                             <%! int i=1; %>
-                                                               <%   while (rs.next()) { %>
+                                                           <%  for(int i = 0; i < eventList.size(); i++) {  %>
 								<tr>
                                                                     <th scope="row"><%= i%></th>
-                                                                        <td><% out.println(rs.getString("eventName")); %></td>
-									<td><% out.println(rs.getString("eventDate")); %></td>
-                                                                        <td><% out.println(rs.getString("eventDate")); %></td>
-									<td><% out.println(rs.getString("status")); %></td>
-                                                                        <td> <a href="registrations.jsp?id=<% out.println(rs.getString("id")); %>">Regis.</a></td> 
-                                                                        <td> <a data-toggle="tooltip" title="Note: if Deactivate this event you will not able to Active again !!!" href="../Request?Deactivate&id=<% out.println(rs.getString("id")); %>">Deactivate</a></td> 
-                                                        <td> <a href="eventDetails.jsp?id=<% out.println(rs.getString("id")); %>">More</a></td> 
+                                                                        <td><% out.println(eventList.get(i).getEventName()); %></td>
+									<td><% out.println(eventList.get(i).getEventDate()); %></td>
+                                                              
+									<td><% out.println(eventList.get(i).getStatus()); %></td>
+                                                                  
+                                                                        <td><%  String status=eventList.get(i).getStatus(); if(status.equals("Active")){ %> <a href="registrations.jsp?id=<% out.println(eventList.get(i).getId()); %>">Regis.</a> <% } %></td> 
+                                                                        <td><%   if(status.equals("Active")){ %> <a data-toggle="tooltip" title="Note: if Deactivate this event you will not able to Active again !!!" href="../Request?Deactivate&id=<% out.println(eventList.get(i).getId()); %>">Deactivate</a> <% } %></td> 
+                                                        <td> <a href="eventDetails.jsp?id=<% out.println(eventList.get(i).getId()); %>">More</a></td> 
 								</tr>
                                                                 <% i++;} %>
 							</tbody>

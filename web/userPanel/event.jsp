@@ -1,10 +1,15 @@
+<%  String userName=(String)session.getAttribute("userName"); %>
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%  String userName=(String)session.getAttribute("userName");
+<%   
     Getdata getData = new Getdata();
-    ResultSet rs= getData.getAllEvent(userName);
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.getAllEvent(userName);
     
-  %>
+%>
 <%@include file="header.jsp" %>
 <div class="app-content content">
 
@@ -18,7 +23,7 @@
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Dashboard</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Dashboard</a>
                   </li>
                   <li class="breadcrumb-item active">Events
                   </li>
@@ -32,30 +37,30 @@
 <!-- Header footer section start -->
 <section id="header-footer">
 	<div class="row match-height">
-       <%    while (rs.next()) { %>
+         <%  for(int i = 0; i < eventList.size(); i++) {  %>
 		<div class="col-lg-4 col-md-12">
 			<div class="card">
 				<div class="card-body">
                              
-					<h4 class="card-title"><% out.println(rs.getString("eventName")); %></h4>
-					<h6 class="card-subtitle text-muted">             <% out.println(rs.getString("status")); %></h6>
+					<h4 class="card-title"><%  out.println(eventList.get(i).getEventName());%></h4>
+					<h6 class="card-subtitle text-muted">             <% out.println(eventList.get(i).getStatus()); %></h6>
 				</div>
-				<img class="" src="theme-assets/images/carousel/22.jpg" alt="Card image cap">
+				<img class="" style="height:300px;" src="../assets/img/blog/<% out.println(eventList.get(i).getEventPhoto());%>" alt="Card image cap">
 				<div class="card-body">
-					<p class="card-text">   <% String str=rs.getString("eventDec");
+					<p class="card-text">   <% String str=eventList.get(i).getEventDec();
                                            out.println( str.substring(0,100));
                                       
                                        %></p>
 				</div>
 				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
-                                <%  String s1=rs.getString("status"); if (s1.equals("Active")) { %>
+                                <%  String s1=eventList.get(i).getStatus(); if (s1.equals("Active")) { %>
                                             <span class="float-left"><a 
-					 href="registrationDetails.jsp?id=<% out.println(rs.getString("id")); %>" class="card-link">Get Registration
+					 href="registrationDetails.jsp?id=<% out.println(eventList.get(i).getId()); %>" class="card-link">Get Registration
 							<i class="la la-angle-right"></i>
 						</a></span>
                                 <%   }%>
 					<span class="float-right">
-						<a href="eventDetails.jsp?id=<% out.println(rs.getString("id")); %>" class="card-link">Read More
+						<a href="eventDetails.jsp?id=<% out.println(eventList.get(i).getId() ); %>" class="card-link">Read More
 							<i class="la la-angle-right"></i>
 						</a>
 					</span>

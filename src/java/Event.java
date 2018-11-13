@@ -49,9 +49,9 @@ public class Event {
     }
 
     public static ResultSet getAllEvents() throws SQLException {
-        Connection conn = Functions.database.getConn();
+        Connection conn = Functions.Database.getConn();
         String sql = "SELECT * FROM postevent WHERE status ='Active'";
-        ResultSet rs = Functions.database.MyexecuteQuery(conn, sql);
+        ResultSet rs = Functions.Database.MyexecuteQuery(conn, sql);
 
         return rs;
 
@@ -64,9 +64,9 @@ public class Event {
         return result;
     }
 
-    public static int updateEvent(String updateName, String updateDate, String Dec, String Photo, String Title, String id) throws SQLException {
+    public static int updateEvent(String updateName, String updateDate, String Dec, String Title, String id) throws SQLException {
         Connection conn = database.getConn();
-        String sql = "UPDATE postevent SET eventName=" + "'" + updateName + "'," + "eventDate=" + "'" + updateDate + "'," + "eventDec=" + "'" + Dec + "'," + "eventPhoto=" + "'" + Photo + "'," + "eventTitle=" + "'" + Title + "' WHERE id='" + id + "'";
+        String sql = "UPDATE postevent SET eventName=" + "'" + updateName + "'," + "eventDate=" + "'" + updateDate + "'," + "eventDec=" + "'" + Dec + "'," + "eventTitle=" + "'" + Title + "' WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
         return result;
     }
@@ -83,5 +83,14 @@ public class Event {
         String sql = "UPDATE postevent SET status=" + "'Deactivated' WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
         return result;
+    }
+public static int deleteQyery(String id) throws SQLException {
+        Connection conn = database.getConn();
+        String sql = "DELETE  FROM queries  WHERE id='" + id + "'";
+        int result = database.MyexecuteUpdate(conn, sql);
+        return result;
+    }
+    static int PostEvent(String userName, String eventName, String eventDate, String eventDec, String[] eventPhoto, String title) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }

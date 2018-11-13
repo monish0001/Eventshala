@@ -1,9 +1,13 @@
+<%  String eventid = request.getParameter("id"); %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Registration_Table"%>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%@page import="Functions.Getdata"%>
-<%  String eventid = request.getParameter("id");
- Getdata getData = new Getdata();
-    ResultSet rs= getData.getRegistrations(eventid);
+<%   
+    Getdata getData = new Getdata();
+    ArrayList<Registration_Table> eventList = new ArrayList<Registration_Table>();
+     eventList = getData.getRegistrations(eventid);
+    
 %>
 
 
@@ -19,7 +23,7 @@
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Home</a>
                   </li>
                   <li class="breadcrumb-item active">Registrations
                   </li>
@@ -57,12 +61,12 @@
 								</tr>
 							</thead>
 							<tbody>
-                                                               <% while (rs.next()) {  %>
+                                                              <%  for(int i = 0; i < eventList.size(); i++) {  %>
 								<tr>
 									<th scope="row">1</th>
-									<td> <%  out.println(rs.getString("name")); %></td>
-									<td> <%  out.println(rs.getString("mobile")); %></td>
-									<td> <%  out.println(rs.getString("email")); %></td>
+                                                                        <td> <% out.println(eventList.get(i).getName());%></td>
+									<td> <%   out.println(eventList.get(i).getMobile()); %></td>
+									<td> <%   out.println(eventList.get(i).getEmail()); %></td>
 								</tr>
                                                                 <% } %>
 							</tbody>

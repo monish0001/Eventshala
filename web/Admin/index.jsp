@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
 <%! ResultSet pending = null;
@@ -9,9 +11,13 @@
 <% int allCount = Getdata.getAllEventsCount();
     int activeCount = Getdata.getActiveEventsCount();
     int pendingCount = Getdata.getPendingEventsCount();
-    pending=Getdata.getPendingOne();
-    active=Getdata.getActiveOne();
-    rejected=Getdata.getRejectedOne();
+    
+    ArrayList<Event_Table> pending = new ArrayList<Event_Table>();
+    ArrayList<Event_Table> active = new ArrayList<Event_Table>();
+    ArrayList<Event_Table> rejected = new ArrayList<Event_Table>();
+    pending=Getdata.getPendingEvents();
+    active=Getdata.AllEvents();
+    rejected=Getdata.getRejected();
 
 %>
 
@@ -79,7 +85,7 @@
 
             <!-- Statistics -->
             <div class="row match-height">
- <% while (pending.next()) {  %>
+ <%  for(int i = 0; i < pending.size(); i++) {  %>
                 <div class="col-xl-4 col-lg-12">
                     <div class="card">
                         <div class="card-header">
@@ -99,15 +105,15 @@
                         </div>
                         <div class="card-content">
                             <div id="recent-buyers" class="media-list">
-                                <a href="eventDetails.jsp?id=<%out.println(pending.getString("id")); %>"" class="media border-0">
+                                <a href="eventDetails.jsp?id=<%out.println(pending.get(i).getId()); %>"" class="media border-0">
                                     <div class="media-left pr-1">
                                         <span class="avatar avatar-md ">
-                                            <img class="media-object rounded-circle" src="theme-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                            <img class="media-object rounded-circle" src="../assets/img/blog/<% out.println(pending.get(i).getEventPhoto());%>" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
                                     <div class="media-body w-100">
-                                        <span class="list-group-item-heading"> <%  out.println(pending.getString("eventName")); %>
+                                        <span class="list-group-item-heading">  <%  out.println(pending.get(i).getEventName());%>
 
                                         </span>
                                         <ul class="list-unstyled users-list m-0 float-right">
@@ -116,7 +122,7 @@
                                                 </li> 
                                         </ul>
                                         <p class="list-group-item-text mb-0">
-                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(pending.getString("eventDate")); %></span>
+                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(pending.get(i).getEventDate()); %></span>
                                         </p>
                                     </div>
                                 </a>
@@ -126,7 +132,7 @@
                 </div>
 <% } %>
 
- <% while (active.next()) {  %>
+ <%  for(int i = 0; i < active.size(); i++) {  %>
                 <div class="col-xl-4 col-lg-12">
                     <div class="card">
                         <div class="card-header">
@@ -146,15 +152,15 @@
                         </div>
                         <div class="card-content">
                             <div id="recent-buyers" class="media-list">
-                                <a href="eventDetails.jsp?id=<%out.println(active.getString("id")); %>"" class="media border-0">
+                                <a href="eventDetails.jsp?id=<%out.println(active.get(i).getId()); %>" class="media border-0">
                                     <div class="media-left pr-1">
                                         <span class="avatar avatar-md avatar-online">
-                                            <img class="media-object rounded-circle" src="theme-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                            <img class="media-object rounded-circle" src="../assets/img/blog/<% out.println(active.get(i).getEventPhoto());%>" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
                                     <div class="media-body w-100">
-                                        <span class="list-group-item-heading"> <%  out.println(active.getString("eventName")); %>
+                                        <span class="list-group-item-heading"> <%  out.println(active.get(i).getEventName()); %>
 
                                         </span>
                                         <ul class="list-unstyled users-list m-0 float-right">
@@ -163,7 +169,7 @@
                                                 </li> 
                                         </ul>
                                         <p class="list-group-item-text mb-0">
-                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(active.getString("eventDate")); %></span>
+                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(active.get(i).getEventDate()); %></span>
                                         </p>
                                     </div>
                                 </a>
@@ -173,7 +179,7 @@
                 </div>
 <% } %>
 
- <% while (rejected.next()) {  %>
+ <%  for(int i = 0; i < rejected.size(); i++) {  %>
                 <div class="col-xl-4 col-lg-12">
                     <div class="card">
                         <div class="card-header">
@@ -193,15 +199,15 @@
                         </div>
                         <div class="card-content">
                             <div id="recent-buyers" class="media-list">
-                                <a href="eventDetails.jsp?id=<%out.println(rejected.getString("id")); %>"" class="media border-0">
+                                <a href="eventDetails.jsp?id=<%out.println(rejected.get(i).getId()); %>"" class="media border-0">
                                     <div class="media-left pr-1">
                                         <span class="avatar avatar-md ">
-                                            <img class="media-object rounded-circle" src="theme-assets/images/portrait/small/avatar-s-7.png" alt="Generic placeholder image">
+                                            <img class="media-object rounded-circle" src="../assets/img/blog/<% out.println(rejected.get(i).getEventPhoto());%>" alt="Generic placeholder image">
                                             <i></i>
                                         </span>
                                     </div>
                                     <div class="media-body w-100">
-                                        <span class="list-group-item-heading"> <%  out.println(rejected.getString("eventName")); %>
+                                        <span class="list-group-item-heading"> <%  out.println(rejected.get(i).getEventName()); %>
 
                                         </span>
                                         <ul class="list-unstyled users-list m-0 float-right">
@@ -210,7 +216,7 @@
                                                 </li> 
                                         </ul>
                                         <p class="list-group-item-text mb-0">
-                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(rejected.getString("eventDate")); %></span>
+                                            <span class="blue-grey lighten-2 font-small-3"> <%  out.println(rejected.get(i).getEventDate()); %></span>
                                         </p>
                                     </div>
                                 </a>

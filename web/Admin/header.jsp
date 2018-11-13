@@ -79,6 +79,8 @@
                     </li>
                     <li class=" nav-item"><a href="allEvent.jsp"><i class="ft-layers"></i><span class="menu-title" data-i18n="">All Events</span></a>
                     </li>
+                     <li class=" nav-item"><a href="query.jsp"><i class="ft-layers"></i><span class="menu-title" data-i18n="">User's Query</span></a>
+                    </li>
                 </ul>
             </div>
             <div class="navigation-background"></div>

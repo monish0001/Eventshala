@@ -1,11 +1,14 @@
-<%@include file="header.jsp" %>
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
 <%   
     Getdata getData = new Getdata();
-    ResultSet rs= getData.getAllEvents();
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.AllEvents();
     
 %>
+<%@include file="header.jsp" %>
 <div class="icon_menu menu_list">
     <ul class="nav ">
         <li>
@@ -280,7 +283,7 @@
                     <div class="section_title text-center mb50 ">
                         <i class="icon ion-ios-images-outline"></i>
                         <h3 class="title">
-                           EVENT CATEGORES
+                      GALLERY IMAGES
                             <span class="heading_line"></span>
                         </h3>
                     </div>
@@ -289,9 +292,8 @@
         </div>
         <div>
             <ul id="filtr-container" class="portfolio-categories">
-                <li data-filter="all" class="active">All</li>
-                <li data-filter="6">TECHINICAL</li>
-                <li data-filter="7">NON TECHINICAL</li>
+           
+                
                 
             </ul>
             <div class="justify-content-center no-gutters filtr-container">
@@ -302,8 +304,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development</p>
+                                      
                                     </div>
                                 </div>
                             </div>
@@ -317,8 +318,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                                                                </p>
                                     </div>
                                 </div>
                             </div>
@@ -332,8 +332,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                                                       </p>
                                     </div>
                                 </div>
                             </div>
@@ -347,8 +346,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                                                               </p>
                                     </div>
                                 </div>
                             </div>
@@ -362,8 +360,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                                                     </p>
                                     </div>
                                 </div>
                             </div>
@@ -377,8 +374,7 @@
                             <div class="product_info">
                                 <div class="product_info_text">
                                     <div class="product_info_text_inner">
-                                        <h5>agency</h5>
-                                        <p>Mobile Development , Web Design , Web Development                                            </p>
+                                                                           </p>
                                     </div>
                                 </div>
                             </div>
@@ -434,16 +430,16 @@
                             </h5>
                         </div>
                     </div>
-                    <div class="item">
+                <!--    <div class="item">
                         <div class="testimonial_box_two text-center">
                             <blockquote  class="color-light"><p class="color-light">
                                Really this is an amazing platform for online event promotion here you can post your event and get lots of registration for your event by getting registrations you can make your event successful Thank You !!!!
                             </p></blockquote>
                             <h5  class="color-light">
-                              Neha Tomer , <span class="color-gray"> C++ Coder (Student at DDUC) </span>
+                             , <span class="color-gray"> C++ Coder (Student at DDUC) </span>
                             </h5>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="item">
                         <div class="testimonial_box_two  text-center">
                             <blockquote  class="color-light"><p class="color-light">
@@ -653,21 +649,21 @@ https://www.facebook.com/kshitiz.gupta.7121  ">
         </div>
 
         <div class="blog_carousel owl-carousel">
-            <%    while (rs.next()) { %>
+            <%  for(int i = 0; i < eventList.size(); i++) {  %>
             <div class="blog_item">
                 <article  class="card_box_one" >
                     <div class="card_box_img" style="">
-                        <img src="assets/img/blog/b-1.jpg" alt="post">
+                          <img src="assets/img/blog/<%  out.println(eventList.get(i).getEventPhoto());%>" alt="post">
                     </div>
                     <div class="card_box_body">
-                        <span><% out.println(rs.getString("eventDate")); %></span>
-                        <a href="eventDetails.jsp?eventid=<% out.println(rs.getString("id")); %>"><h5><% out.println(rs.getString("eventName")); 
-                            String str=rs.getString("id");%></h5></a>
-                        <a href="eventDetails.jsp?eventid=<%out.println(str); %>" class="read-more">Continue Reading </a>
+                        <span><% out.println(eventList.get(i).getEventDate()); %></span>
+                        <a href="eventDetails.jsp?eventid=<% out.println(eventList.get(i).getId()); %>"><h5><% out.println(eventList.get(i).getEventName()); 
+                       %></h5></a>
+                        <a href="eventDetails.jsp?eventid=<%  out.print(eventList.get(i).getId());  %>" class="read-more">Continue Reading </a>
                     </div>
                 </article>
             </div>
-            <%} %>
+            <% } %>
           
         </div>
         <div class="text-center">

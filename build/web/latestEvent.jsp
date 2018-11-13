@@ -1,11 +1,14 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
+<%@include file="header.jsp" %>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%@include file="header.jsp" %>
-<%   Getdata getData = new Getdata();
-    ResultSet rs= getData.getAllEvents();
+<%   
+    Getdata getData = new Getdata();
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.AllEvents();
     
-  %>
-
+%>
 <!--cover section start -->
 <section class="page_heading  parallax-window" data-parallax="scroll" data-image-src="assets/img/bg/bg8.jpg">
     <div class="overlay_dark"></div>
@@ -133,24 +136,24 @@
             <div class="container">
                 <div class="row text-center justify-content-center">
 
-              <%    while (rs.next()) { %>
+                <%  for(int i = 0; i < eventList.size(); i++) {  %>
                     <div class="col-md-4 col-12">
                         <div class="img_box_two">
-                            <div class="img_container" style="background-image: url('assets/img/bg/bl3.jpg')" ></div>
+                         <img style="height:400px;width:400px;" src="assets/img/blog/<% out.println(eventList.get(i).getEventPhoto());%>"> 
                             <div class="content">
                                 <h5 class="title">
                                     
-                                    <% out.println(rs.getString("eventName")); %>
+                                    <% out.println(eventList.get(i).getEventName()); %>
      
 
                                 </h5>
                                 <p class="text">
-                                       <% String str=rs.getString("eventDec");
+                                       <% String str=eventList.get(i).getEventDec();
                                            out.println( str.substring(0,100));
                                       
                                        %>
                                 </p>
-                                <a href="eventDetails.jsp?eventid=<% out.println(rs.getString("id")); %>" class="link">Read More</a>
+                                <a href="eventDetails.jsp?eventid=<%out.println(eventList.get(i).getId()); %>" class="link">Read More</a>
                             </div>
                         </div>
                     </div>

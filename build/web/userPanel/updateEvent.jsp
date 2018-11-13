@@ -1,12 +1,16 @@
+<%  String eventid = request.getParameter("id"); %>
+
+<%@page import="java.util.ArrayList"%>
+<%@page import="Functions.Event_Table"%>
+<%@include file="header.jsp" %>
 <%@page import="Functions.Getdata" %>
 <%@page import="java.sql.ResultSet"%>
-<%  String id=request.getParameter("id");
+<%   
     Getdata getData = new Getdata();
-    ResultSet rs= getData.getoneEvent(id);
+    ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
+     eventList = getData.getoneEvent(eventid);
     
-    
-  %>
-
+%>
 
 <%@include file="header.jsp" %>
     <div class="app-content content">
@@ -20,7 +24,7 @@
             <div class="breadcrumbs-top float-md-right">
               <div class="breadcrumb-wrapper mr-1">
                 <ol class="breadcrumb">
-                  <li class="breadcrumb-item"><a href="index.html">Home</a>
+                  <li class="breadcrumb-item"><a href="index.jsp">Home</a>
                   </li>
                   <li class="breadcrumb-item active">Update event
                   </li>
@@ -44,7 +48,7 @@
                 </div>
             </div>
               
-                <% while (rs.next()) {  %>  
+           <%  for(int i = 0; i < eventList.size(); i++) {  %>
                 <form  action="../Request" method="GET" >
             	<div class="form-body">
             <div class="card-content">
@@ -53,33 +57,28 @@
                         <dl class="row">
                             <dt class="col-sm-3">Event Name</dt>
                             <dd class="col-sm-9"><div class="form-group">
-                                    <input type="text" id="name" value="<%  out.println(rs.getString("eventName")); %>" class="form-control" placeholder="Event Name" name="name">
+                                    <input required="" type="text" id="name" value=" <%  out.println(eventList.get(i).getEventName());%>" class="form-control" placeholder="Event Name" name="name">
                 </div></dd>
                         </dl>
                         <dl class="row">
                             <dt class="col-sm-3">Event Title</dt>
                             <dd class="col-sm-9"><div class="form-group">
-                                    <input type="text" id="title" value="<%  out.println(rs.getString("eventTitle")); %>" class="form-control" placeholder="Title" name="title">
+                                    <input required="" type="text" id="title" value="<%  out.println(eventList.get(i).getEventTitle()); %>" class="form-control" placeholder="Title" name="title">
                 </div></dd>
                         </dl>
                         <dl class="row">
                             <dt class="col-sm-3">Event Date</dt>
                             <dd class="col-sm-9"><div class="form-group">
-                                    <input type="text" id="Date" value="<%  out.println(rs.getString("eventDate")); %>" class="form-control" placeholder="Date" name="Date">
+                                    <input required="" type="text" id="Date" value=" <%  out.println(eventList.get(i).getEventDate()); %>" class="form-control" placeholder="Date" name="Date">
                 </div></dd>
                         </dl>
                         
-                <input type="hidden" name="id" value="<%  out.println(rs.getString("id")); %>">
-                        <dl class="row">
-                            <dt class="col-sm-3 text-truncate">Baner Image</dt>
-                            <dd class="col-sm-9"><div class="form-group">
-                  <input type="file" id="image" class="form-control"  placeholder="Image" name="image">
-                </div></dd>
-                        </dl>
+                <input type="hidden" name="id" value="<%  out.println(eventList.get(i).getId() ); %>">
+                   
                         <dl class="row">
                             <dt class="col-sm-3">Event Descreption</dt>
                             <dd class="col-sm-9"><div class="form-group">
-                                    <input type="text" id="descreption"  value="<%  out.println(rs.getString("eventDec")); %>" class="form-control" placeholder="dec" name="dec">
+                                    <textarea type="text" id="descreption"  required="" value=" <%  out.println(eventList.get(i).getEventDec()); %>" class="form-control" placeholder="dec" name="dec"> </textarea>
                 </div></dd>
                         </dl>
                        
