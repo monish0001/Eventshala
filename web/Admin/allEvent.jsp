@@ -66,10 +66,10 @@ $(document).ready(function(){
 								</tr>
 							</thead>
 							<tbody>
-                                                            <%! int i=1; %>
+                                                            <%! int j=1; %>
                                                            <%  for(int i = 0; i < eventList.size(); i++) {  %>
 								<tr>
-                                                                    <th scope="row"><%= i%></th>
+                                                                    <th scope="row"><%= j%></th>
                                                                         <td><% out.println(eventList.get(i).getEventName()); %></td>
 									<td><% out.println(eventList.get(i).getEventDate()); %></td>
                                                               
@@ -79,7 +79,7 @@ $(document).ready(function(){
                                                                         <td><%   if(status.equals("Active")){ %> <a data-toggle="tooltip" title="Note: if Deactivate this event you will not able to Active again !!!" href="../Request?Deactivate&id=<% out.println(eventList.get(i).getId()); %>">Deactivate</a> <% } %></td> 
                                                         <td> <a href="eventDetails.jsp?id=<% out.println(eventList.get(i).getId()); %>">More</a></td> 
 								</tr>
-                                                                <% i++;} %>
+                                                                <% j++;} %>
 							</tbody>
 						</table>
 					</div>

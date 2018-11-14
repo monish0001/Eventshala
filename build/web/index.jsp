@@ -137,7 +137,7 @@
             <div class="col-md-3 col-12">
                 <div class="counter_box_one ">
                     <i class="ion-ios-contract-outline color-light"></i>
-                    <span class="counter">550</span>
+                    <span class="counter">999</span>
                     <h5 class="color-light">
                         Total Events
                     </h5>
@@ -146,7 +146,7 @@
             <div class="col-md-3 col-12">
                 <div class="counter_box_one ">
                     <i class="ion-ios-bowtie-outline color-light"></i>
-                    <span class="counter">350</span>
+                    <span class="counter">9</span>
                     <h5 class="color-light">
                         Today's Events
                     </h5>
@@ -155,7 +155,7 @@
             <div class="col-md-3 col-12">
                 <div class="counter_box_one ">
                     <i class="ion-ios-stopwatch-outline color-light"></i>
-                    <span class="counter">400</span>
+                    <span class="counter">99</span>
                     <h5 class="color-light">
                         Active Events
                     </h5>
@@ -165,7 +165,7 @@
             <div class="col-md-3 col-12">
                 <div class="counter_box_one ">
                     <i class="ion-ios-color-palette-outline color-light"></i>
-                    <span class="counter">+300</span>
+                    <span class="counter">+750 </span>[+]
                     <h5 class="color-light">
                         Successfull Events
                     </h5>
@@ -652,8 +652,8 @@ https://www.facebook.com/kshitiz.gupta.7121  ">
             <%  for(int i = 0; i < eventList.size(); i++) {  %>
             <div class="blog_item">
                 <article  class="card_box_one" >
-                    <div class="card_box_img" style="">
-                          <img src="assets/img/blog/<%  out.println(eventList.get(i).getEventPhoto());%>" alt="post">
+                    <div class="card_box_img" >
+                          <img  src="assets/img/blog/<%  out.println(eventList.get(i).getEventPhoto());%>" alt="post">
                     </div>
                     <div class="card_box_body">
                         <span><% out.println(eventList.get(i).getEventDate()); %></span>

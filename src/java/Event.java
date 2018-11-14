@@ -9,6 +9,7 @@ public class Event {
         Connection conn = database.getConn();
         String sql = "INSERT INTO Queries(name,email,message) VALUES ('" + name + "','" + email + "','" + msg + "')";
         int result = database.MyexecuteUpdate(conn, sql);
+        database.CloseConnection(conn);
         return result;
 
     }
@@ -17,6 +18,7 @@ public class Event {
         password = database.md5Map(password);
         String sql = "INSERT INTO users(userName,email,password)VALUES ('" + userName + "','" + email + "','" + password + "')";
         int result = database.MyexecuteUpdate(conn, sql);
+        database.CloseConnection(conn);
         return result;
     }
 
@@ -32,28 +34,21 @@ public class Event {
             Password = rs.getString("password");
         }
         if (Username != null && Password != null && userName.equals(Username) && password.equals(Password)) {
-
+               database.CloseConnection(conn);
             return true;
         } else {
+               database.CloseConnection(conn);
             return false;
         }
-
+   
     }
 
     public static int PostEvent(String userName, String eventName, String eventDate, String eventDec, String eventPhoto, String url) throws SQLException {
         Connection conn = database.getConn();
         String sql = "INSERT INTO postevent(userName,eventName,eventDate,eventDec,eventPhoto,eventTitle) VALUES ('" + userName + "','" + eventName + "','" + eventDate + "','" + eventDec + "','" + eventPhoto + "','" + url + "')";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
-
-    }
-
-    public static ResultSet getAllEvents() throws SQLException {
-        Connection conn = Functions.Database.getConn();
-        String sql = "SELECT * FROM postevent WHERE status ='Active'";
-        ResultSet rs = Functions.Database.MyexecuteQuery(conn, sql);
-
-        return rs;
 
     }
 
@@ -61,6 +56,7 @@ public class Event {
         Connection conn = database.getConn();
         String sql = "INSERT INTO registration(name,mobile,email,eventId,parent)VALUES ('" + Name + "','" + Mobile + "','" + Email + "','" + Parent + "','" + eventId + "')";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
     }
 
@@ -68,6 +64,7 @@ public class Event {
         Connection conn = database.getConn();
         String sql = "UPDATE postevent SET eventName=" + "'" + updateName + "'," + "eventDate=" + "'" + updateDate + "'," + "eventDec=" + "'" + Dec + "'," + "eventTitle=" + "'" + Title + "' WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
     }
 
@@ -75,6 +72,7 @@ public class Event {
         Connection conn = database.getConn();
         String sql = "UPDATE postevent SET status=" + "'Active' WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
     }
 
@@ -82,14 +80,24 @@ public class Event {
         Connection conn = database.getConn();
         String sql = "UPDATE postevent SET status=" + "'Deactivated' WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
     }
 public static int deleteQyery(String id) throws SQLException {
         Connection conn = database.getConn();
         String sql = "DELETE  FROM queries  WHERE id='" + id + "'";
         int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
         return result;
     }
+public static int updatestatus(String id) throws SQLException{
+     Connection conn = database.getConn();
+     String status="Rejected";
+        String sql = "UPDATE postevent SET status=" + "'" + status + "' WHERE id='" + id + "'";
+        int result = database.MyexecuteUpdate(conn, sql);
+           database.CloseConnection(conn);
+        return result;
+}
     static int PostEvent(String userName, String eventName, String eventDate, String eventDec, String[] eventPhoto, String title) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }

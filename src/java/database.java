@@ -1,3 +1,4 @@
+
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -8,6 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class database {
+
     public static Connection getConn() throws SQLException {
         Connection conn = null;
         try {
@@ -22,7 +24,6 @@ public class database {
 
     public static ResultSet MyexecuteQuery(Connection conn, String sql) throws SQLException {
         Statement stmt = null;
-        
         stmt = conn.createStatement();
         ResultSet resultSet = stmt.executeQuery(sql);
         return resultSet;

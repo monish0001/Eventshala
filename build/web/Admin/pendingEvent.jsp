@@ -5,7 +5,7 @@
 <%   
     Getdata getData = new Getdata();
     ArrayList<Event_Table> eventList = new ArrayList<Event_Table>();
-     eventList = getData.getPendingEvents();
+    eventList = getData.getPendingEvents();
     
 %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -50,6 +50,10 @@
                                        %></p>
 				</div>
 				<div class="card-footer border-top-blue-grey border-top-lighten-5 text-muted">
+                                      <span class="float-left"><a 
+					 href="../Request?Rejected&id=<% out.println(eventList.get(i).getId()); %>" class="card-link">Reject
+							<i class="la la-angle-right"></i>
+						</a></span>
 					<span class="float-right">
 						<a href="eventDetails.jsp?id=<% out.println(eventList.get(i).getId()); %>" class="card-link">Read More
 							<i class="la la-angle-right"></i>

@@ -249,7 +249,6 @@ public class Request extends HttpServlet {
                 String Title = request.getParameter("title");
                 //  out.println(updateName + " " + Dated + " " + Dec + " " + Photo + " " + Title+ " " + id);
                 int res = Event.updateEvent(updateName, Dated, Dec, Title, id);
-                out.println(res);
                 if (res > 0) {
                     out.println("<script type=\"text/javascript\">");
                     out.println("alert('Event Updated Successfully')");
@@ -257,6 +256,17 @@ public class Request extends HttpServlet {
                     out.println("</script>");
                 }
 
+            }else if (request.getParameterMap().containsKey("Rejected")) {
+
+                String id = request.getParameter("id");
+                int result = Event.updatestatus(id);
+                if (result > 0) {
+                     out.println("<script type=\"text/javascript\">");
+                    out.println("alert('Event Updated Successfully')");
+                    out.println("location='http://localhost:8080/eventshala/Admin/';");
+                    out.println("</script>");
+                    
+                }
             }
 
         }
